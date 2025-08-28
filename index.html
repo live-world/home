@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3BHK Home in Hosakerehalli - Property Listing</title>
+<meta name="description" content="Beautiful 3BHK home for sale in Hosakerehalli, Bengaluru. View photos, video tour and details." />
+<meta name="robots" content="index,follow" />
+<!-- Favicon -->
+<link rel="icon" href="./assets/img/global/favicon.ico" sizes="any" />
+<!-- Styles -->
+<link rel="stylesheet" href="./assets/css/styles.css?v=0.8" />
+<link rel="stylesheet" href="./assets/css/colors.css?v=0.8" />
+<style>
+  /* Custom tweaks for property page */
+  .hero {
+    text-align: center;
+    padding: 4rem 0 2rem;
+  }
+  .hero .overview {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: inherit;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  section {
+    padding: 3rem 0;
+  }
+  .property-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .property-details-list li {
+    margin-bottom: 0.5rem;
+  }
+  .property-details-list li strong {
+    display: inline-block;
+    min-width: 120px;
+  }
+  .ratio {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+  }
+  .ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+</head>
+<body class="scheme-daylight">
+<header class="top">
+  <div class="top__left">
+    <img class="top__avatar" src="./assets/img/global/avatar.jpg" alt="Property" />
+    <span class="top__brand">Hosakerehalli Home</span>
+  </div>
+  <nav class="top__right">
+    <div class="links">
+      <a href="#gallery" class="top__link">Gallery</a>
+      <a href="#video" class="top__link">Video</a>
+      <a href="#details" class="top__link">Details</a>
+    </div>
+  </nav>
+</header>
+<section class="hero">
+  <div class="boxed">
+    <h1 class="overview">Stunning 3BHK Home for Sale in Hosakerehalli</h1>
+    <p>Discover your dream home in a serene neighbourhood of Bengaluru.</p>
+  </div>
+</section>
+<section id="gallery">
+  <div class="boxed">
+    <div class="slider-group">
+      <div class="siema-wrapper"> 
+        <div class="siema" data-slider="gallery">
+          <div><img src="./assets/img/property/property-exterior-3.webp" alt="Exterior"></div>
+          <div><img src="./assets/img/property/property-interior-1.webp" alt="Living Room"></div>
+          <div><img src="./assets/img/property/property-interior-2.webp" alt="Kitchen"></div>
+          <div><img src="./assets/img/property/property-interior-3.webp" alt="Bedroom"></div>
+          <div><img src="./assets/img/property/property-exterior-4.webp" alt="Garden"></div>
+          <div><img src="./assets/img/property/property-interior-4.webp" alt="Bathroom"></div>
+          <div><img src="./assets/img/property/property-interior-5.webp" alt="Dining Room"></div>
+          <div><img src="./assets/img/property/property-exterior-5.webp" alt="Front View"></div>
+        </div>
+      </div>
+      <span class="slider-controls">
+        <button class="prev" aria-label="Previous slide">Prev</button>
+        <button class="next" aria-label="Next slide">Next</button>
+      </span>
+    </div>
+    <h2 class="slider-heading">Gallery</h2>
+    <p>Swipe or use the buttons to explore photos of this beautiful home.</p>
+  </div>
+</section>
+<section id="video">
+  <div class="boxed">
+    <h2>Video Tour</h2>
+    <div class="ratio">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Property Tour" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<section id="details" class="bg-alt">
+  <div class="boxed">
+    <h2>Property Details</h2>
+    <ul class="property-details-list">
+      <li><strong>Price:</strong> ₹1.2 Crore</li>
+      <li><strong>Area:</strong> 1,500 sq ft</li>
+      <li><strong>Configuration:</strong> 3 Bedrooms, 2 Bathrooms, 1 Living Room, Modular Kitchen</li>
+      <li><strong>Amenities:</strong> Parking, 24/7 Security, Lift, Power Backup, Garden</li>
+      <li><strong>Location:</strong> Hosakerehalli, Bengaluru, Karnataka, India</li>
+    </ul>
+    <p>This beautifully designed 3BHK home in Hosakerehalli offers spacious living and modern comforts. Enjoy peaceful surroundings with quick access to schools, hospitals, and shopping centres.</p>
+  </div>
+</section>
+<footer class="site-footer">
+  <p class="footer-left">© 2025 Your Name</p>
+  <p class="footer-right"><a href="https://onepagelove.com/sphere">Sphere Template</a> by One Page Love</p>
+</footer>
+<!-- JS -->
+<script src="./assets/js/siema.min.js?v=0.8"></script>
+<script src="./assets/js/main.js?v=0.8"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.siema').forEach((element) => {
+      const slider = new Siema({ selector: element, duration: 200, loop: true });
+      const container = element.parentElement.parentElement;
+      container.querySelector('.prev').addEventListener('click', () => slider.prev());
+      container.querySelector('.next').addEventListener('click', () => slider.next());
+    });
+  });
+</script>
+</body>
+</html>
