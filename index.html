@@ -6,13 +6,18 @@
 <title>3BHK Home in Hosakerehalli - Property Listing</title>
 <meta name="description" content="Beautiful 3BHK home for sale in Hosakerehalli, Bengaluru. View photos, video tour and details." />
 <meta name="robots" content="index,follow" />
+
 <!-- Favicon -->
 <link rel="icon" href="./assets/img/global/favicon.ico" sizes="any" />
+
 <!-- Styles -->
 <link rel="stylesheet" href="./assets/css/styles.css?v=0.8" />
 <link rel="stylesheet" href="./assets/css/colors.css?v=0.8" />
+
 <style>
   /* Custom tweaks for property page */
+  :root { scroll-behavior: smooth; }
+
   .hero {
     text-align: center;
     padding: 4rem 0 2rem;
@@ -26,34 +31,44 @@
     font-size: 1.1rem;
     opacity: 0.8;
   }
-  section {
-    padding: 3rem 0;
-  }
-  .property-details-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .property-details-list li {
-    margin-bottom: 0.5rem;
-  }
-  .property-details-list li strong {
-    display: inline-block;
-    min-width: 120px;
-  }
-  .ratio {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 56.25%;
-  }
+  section { padding: 3rem 0; }
+
+  .property-details-list { list-style: none; padding: 0; margin: 0; }
+  .property-details-list li { margin-bottom: 0.5rem; }
+  .property-details-list li strong { display: inline-block; min-width: 120px; }
+
+  .ratio { position: relative; width: 100%; overflow: hidden; padding-top: 56.25%; }
   .ratio iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: none;
+  }
+
+  /* Slider essentials */
+  .siema-wrapper { position: relative; z-index: 1; }
+  .siema img { display: block; width: 100%; height: auto; }
+  .slider-controls {
+    display: inline-flex; gap: .75rem; align-items: center;
+    margin-top: .75rem; position: relative; z-index: 2;
+  }
+  .slider-controls .prev,
+  .slider-controls .next {
+    appearance: none; border: 0; padding: .6rem .9rem; border-radius: .6rem;
+    cursor: pointer; font-weight: 600;
+  }
+
+  /* Minor layout polish */
+  header.top {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    padding: .75rem 1rem; position: sticky; top: 0; z-index: 100; background: var(--bg, #fff);
+  }
+  .top__left { display: flex; align-items: center; gap: .6rem; }
+  .top__avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+  .links { display: flex; gap: 1rem; }
+  .top__link { text-decoration: none; font-weight: 600; }
+  .boxed { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+  footer.site-footer {
+    display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem 1rem; opacity: .8;
   }
 </style>
 </head>
@@ -63,7 +78,7 @@
     <img class="top__avatar" src="./assets/img/global/avatar.jpg" alt="Property" />
     <span class="top__brand">Hosakerehalli Home</span>
   </div>
-  <nav class="top__right">
+  <nav class="top__right" aria-label="Sections">
     <div class="links">
       <a href="#gallery" class="top__link">Gallery</a>
       <a href="#video" class="top__link">Video</a>
@@ -71,17 +86,19 @@
     </div>
   </nav>
 </header>
+
 <section class="hero">
   <div class="boxed">
     <h1 class="overview">Stunning 3BHK Home for Sale in Hosakerehalli</h1>
     <p>Discover your dream home in a serene neighbourhood of Bengaluru.</p>
   </div>
 </section>
+
 <section id="gallery">
   <div class="boxed">
     <div class="slider-group">
-      <div class="siema-wrapper"> 
-        <div class="siema" data-slider="gallery">
+      <div class="siema-wrapper">
+        <div class="siema" data-slider="gallery" aria-label="Property image gallery">
           <div><img src="./assets/img/property/property-exterior-3.webp" alt="Exterior"></div>
           <div><img src="./assets/img/property/property-interior-1.webp" alt="Living Room"></div>
           <div><img src="./assets/img/property/property-interior-2.webp" alt="Kitchen"></div>
@@ -92,29 +109,35 @@
           <div><img src="./assets/img/property/property-exterior-5.webp" alt="Front View"></div>
         </div>
       </div>
-      <span class="slider-controls">
-        <button class="prev" aria-label="Previous slide">Prev</button>
-        <button class="next" aria-label="Next slide">Next</button>
+      <span class="slider-controls" aria-label="Slider controls">
+        <button class="prev" type="button" aria-label="Previous slide">Prev</button>
+        <button class="next" type="button" aria-label="Next slide">Next</button>
       </span>
     </div>
     <h2 class="slider-heading">Gallery</h2>
     <p>Swipe or use the buttons to explore photos of this beautiful home.</p>
   </div>
 </section>
+
 <section id="video">
   <div class="boxed">
     <h2>Video Tour</h2>
     <div class="ratio">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Property Tour" allowfullscreen></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Property Tour"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 </section>
+
 <section id="details" class="bg-alt">
   <div class="boxed">
     <h2>Property Details</h2>
     <ul class="property-details-list">
-      <li><strong>Price:</strong> ₹1.2 Crore</li>
-      <li><strong>Area:</strong> 1,500 sq ft</li>
+      <li><strong>Price:</strong> ₹1.2 Crore</li>
+      <li><strong>Area:</strong> 1,500 sq ft</li>
       <li><strong>Configuration:</strong> 3 Bedrooms, 2 Bathrooms, 1 Living Room, Modular Kitchen</li>
       <li><strong>Amenities:</strong> Parking, 24/7 Security, Lift, Power Backup, Garden</li>
       <li><strong>Location:</strong> Hosakerehalli, Bengaluru, Karnataka, India</li>
@@ -122,22 +145,70 @@
     <p>This beautifully designed 3BHK home in Hosakerehalli offers spacious living and modern comforts. Enjoy peaceful surroundings with quick access to schools, hospitals, and shopping centres.</p>
   </div>
 </section>
+
 <footer class="site-footer">
   <p class="footer-left">© 2025 Your Name</p>
-  <p class="footer-right"><a href="https://onepagelove.com/sphere">Sphere Template</a> by One Page Love</p>
+  <p class="footer-right"><a href="https://onepagelove.com/sphere" rel="noopener">Sphere Template</a> by One Page Love</p>
 </footer>
-<!-- JS -->
-<script src="./assets/js/siema.min.js?v=0.8"></script>
-<script src="./assets/js/main.js?v=0.8"></script>
+
+<!-- JS: load Siema first, then your main, then inline init -->
+<script src="./assets/js/siema.min.js?v=0.9"></script>
+<script src="./assets/js/main.js?v=0.9"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.siema').forEach((element) => {
-      const slider = new Siema({ selector: element, duration: 200, loop: true });
-      const container = element.parentElement.parentElement;
-      container.querySelector('.prev').addEventListener('click', () => slider.prev());
-      container.querySelector('.next').addEventListener('click', () => slider.next());
+  // Defensive, per-slider initialization
+  (function () {
+    function ready(fn) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fn);
+      } else { fn(); }
+    }
+
+    ready(function () {
+      // If Siema failed to load, don't break the rest of the page
+      if (typeof window.Siema === 'undefined') {
+        console.error('Siema not found. Check ./assets/js/siema.min.js path/case.');
+        return;
+      }
+
+      // For each slider-group, make its own instance + wire controls
+      document.querySelectorAll('.slider-group').forEach(function (group) {
+        var track = group.querySelector('.siema');
+        if (!track) return;
+
+        var slider = new Siema({
+          selector: track,
+          duration: 200,
+          loop: true
+        });
+
+        var prevBtn = group.querySelector('.prev');
+        var nextBtn = group.querySelector('.next');
+
+        if (prevBtn) prevBtn.addEventListener('click', function (e) { e.preventDefault(); slider.prev(); });
+        if (nextBtn) nextBtn.addEventListener('click', function (e) { e.preventDefault(); slider.next(); });
+
+        // Lightweight swipe in case draggable is disabled in lib build
+        var startX = 0;
+        group.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        group.addEventListener('touchend', function (e) {
+          var diff = e.changedTouches[0].clientX - startX;
+          if (Math.abs(diff) > 40) { diff > 0 ? slider.prev() : slider.next(); }
+        });
+      });
+
+      // Smooth-scroll for top nav anchors (extra guard for older browsers)
+      document.querySelectorAll('a.top__link[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var id = a.getAttribute('href');
+          var target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
     });
-  });
+  })();
 </script>
 </body>
 </html>
